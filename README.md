@@ -3,7 +3,7 @@
   height="150"
 /></a>
 
-Trying to ngrok on docker.
+Try to ngrok on docker.
 
 # Usage
 
