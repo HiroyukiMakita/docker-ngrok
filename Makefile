@@ -12,7 +12,8 @@ COMPOSE := docker-compose
 BUILD := $(COMPOSE) build --no-cache
 UP := $(COMPOSE) up -d
 DOWN := $(COMPOSE) down
-EXEC = $(COMPOSE) exec $(CONTAINER) bash $(ARG)
+SHELL = bash
+EXEC = $(COMPOSE) exec $(CONTAINER) $(SHELL) $(ARG)
 CONTAINER =
 ARG =
 
@@ -40,8 +41,8 @@ up:
 	@$(UP)
 
 exec-ngrok:
-	$(eval CONTAINER := $(CENTOS))
-	$(eval ARG := -c "cd $(CONTAINER_SOURCE_ROOT) && bash")
+	$(eval CONTAINER := $(NGROK))
+	$(eval SHELL = sh)
 	@$(EXEC)
 
 down:
