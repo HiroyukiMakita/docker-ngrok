@@ -20,6 +20,20 @@ $ cp .env.example .env
 NGROK_TARGET=3000
 ```
 
+### ※ If you need Basic Autentication
+
+In `.env` file,  
+write to your authcode into NGROK_AUTH  
+and set to info of Basic Autentication into NGROK_AUTH, NGROK_PASSWORD,  
+and uncomment row of below in `compose.yml`.
+
+```
+    # Basic 認証
+    # NGROK_USERNAME: ${NGROK_USERNAME}
+    # NGROK_PASSWORD: ${NGROK_PASSWORD}
+    # NGROK_AUTH: ${NGROK_AUTH}
+```
+
 ## 3. Build ngrok container.
 
 ```
@@ -60,19 +74,3 @@ $ make down up
 [http://localhost:<NGROK_PORT>/inspect/http](http://localhost:<NGROK_PORT>/inspect/http)
 
 ※ NGROK_PORT is your setting.
-
-## If you need Basic Autentication
-
-In `.env` file,  
-write to your authcode into NGROK_AUTH  
-and set to info of Basic Autentication into NGROK_AUTH, NGROK_PASSWORD,  
-and uncomment row of below in `compose.yml`.
-
-```
-    # Basic 認証
-    # NGROK_USERNAME: ${NGROK_USERNAME}
-    # NGROK_PASSWORD: ${NGROK_PASSWORD}
-    # NGROK_AUTH: ${NGROK_AUTH}
-```
-
-※ Don't forget to restart ngrok container.
