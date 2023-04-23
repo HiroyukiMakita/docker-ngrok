@@ -3,7 +3,7 @@
   height="150"
 /></a>
 
-Trying to Ngrok on docker.
+Trying to ngrok on docker.
 
 # Usage
 
@@ -20,13 +20,13 @@ $ cp .env.example .env
 NGROK_TARGET=3000
 ```
 
-## 3. Build Ngrok container.
+## 3. Build ngrok container.
 
 ```
 $ make up
 ```
 
-## 4. Login Ngrok site, And copy your authtoken.
+## 4. Login ngrok site, And copy your authtoken.
 
 - Login from below.  
   [https://dashboard.ngrok.com/login](https://dashboard.ngrok.com/get-started/setup)
@@ -34,9 +34,9 @@ $ make up
 - Copy your authtoken from below.  
   [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
 
-## 5. Register your authcode in Ngrok container only once.
+## 5. Register your authcode in ngrok container only once.
 
-- Come in Ngrok container.
+- Come in ngrok container.
 
 ```
 $ make exec-ngrok
@@ -45,17 +45,17 @@ $ make exec-ngrok
 - Register your authcode.
 
 ```
-# in Ngrok container
+# in ngrok container
 / $ ngrok authtoken <your authcode>
 ```
 
-## 6. Restart Ngrok container
+## 6. Restart ngrok container
 
 ```
 $ make down up
 ```
 
-## 7. Confirm your Ngrok status.
+## 7. Confirm your ngrok status.
 
 [http://localhost:<NGROK_PORT>/inspect/http](http://localhost:<NGROK_PORT>/inspect/http)
 
