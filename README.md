@@ -31,8 +31,8 @@ NGROK_TARGET=3000
 ### ※ If you need Basic Autentication
 
 In `.env` file,  
-write to your authcode into NGROK_AUTH  
-and set to info of Basic Autentication into NGROK_AUTH, NGROK_PASSWORD,  
+write to your authcode into `NGROK_AUTH`  
+and set to info of Basic Autentication into `NGROK_AUTH`, `NGROK_PASSWORD`,  
 and uncomment row of below in `compose.yml`.
 
 ```
@@ -73,4 +73,4 @@ $ make down up
 
 [http://localhost:<NGROK_PORT>/inspect/http](http://localhost:<NGROK_PORT>/inspect/http)
 
-※ NGROK_PORT is your setting.
+※ `NGROK_PORT` is your setting.
