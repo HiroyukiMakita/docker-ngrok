@@ -7,6 +7,14 @@ Try to ngrok on docker.
 
 # Usage
 
+## Login or signup in ngrok site, And copy your authtoken.
+
+- Login or signup from below ngrok site.  
+  [https://dashboard.ngrok.com/](https://dashboard.ngrok.com/)
+
+- Copy your authtoken from below.  
+  [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
+
 ## 1. Create `.env` file.
 
 ```
@@ -40,15 +48,7 @@ and uncomment row of below in `compose.yml`.
 $ make up
 ```
 
-## 4. Login or signup in ngrok site, And copy your authtoken.
-
-- Login or signup from below ngrok site.  
-  [https://dashboard.ngrok.com/](https://dashboard.ngrok.com/)
-
-- Copy your authtoken from below.  
-  [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
-
-## 5. Register your authcode in ngrok container only once.
+## 4. Register your authcode in ngrok container only once.(Only if you haven't never register yet.)
 
 - Come in ngrok container.
 
@@ -63,13 +63,13 @@ $ make exec-ngrok
 / $ ngrok authtoken <your authcode>
 ```
 
-## 6. Restart ngrok container
+## 5. Restart ngrok container
 
 ```
 $ make down up
 ```
 
-## 7. Confirm your ngrok status.
+## 6. Confirm your ngrok status.
 
 [http://localhost:<NGROK_PORT>/inspect/http](http://localhost:<NGROK_PORT>/inspect/http)
 
