@@ -1,0 +1,16 @@
+version: '3'
+
+volumes:
+  ngrok_yml:
+
+services:
+  ngrok:
+    container_name: ngrok
+    image: wernight/ngrok:latest
+    ports:
+      - ${NGROK_PORT}:4040
+    environment:
+      NGROK_PORT: ${NGROK_TARGET}
+    volumes:
+      # 名前付きボリュームで認証トークンが保存してある ngrok.yml を使用する
+      - ngrok_yml:/home/ngrok/.ngrok2
