@@ -40,10 +40,10 @@ and uncomment row of below in `compose.yml`.
 $ make up
 ```
 
-## 4. Login ngrok site, And copy your authtoken.
+## 4. Login or signup in ngrok site, And copy your authtoken.
 
-- Login from below.  
-  [https://dashboard.ngrok.com/login](https://dashboard.ngrok.com/get-started/setup)
+- Login or signup from below ngrok site.  
+  [https://dashboard.ngrok.com/](https://dashboard.ngrok.com/)
 
 - Copy your authtoken from below.  
   [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
