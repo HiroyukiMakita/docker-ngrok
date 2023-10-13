@@ -1,0 +1,12 @@
+# https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config/#full-example
+version: 2
+authtoken: YOUR_TOKEN
+tunnels:
+  tunnel-name:
+    proto: http
+    basic_auth:
+      - "name:pass"
+    # Ngrok で公開したいポート docker-compose の別コンテナの場合は service:3000 みたいな感じ
+    # ローカルの場合は localhost:3000 みたいな感じ
+    addr: host.docker.internal:3000
+    domain: YOUR_DOMAIN

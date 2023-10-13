@@ -1,21 +1,17 @@
 version: '3'
 
-volumes:
-  ngrok_yml:
-
 services:
   ngrok:
     container_name: ngrok
-    image: ${NGROK_IMAGE_VERSION}
+    image: ${NGROK_IMAGE}
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "${NGROK_ADDITIONAL_CONFIG_FILES}"
+    restart: unless-stopped
     platform: linux/amd64
     ports:
       - ${NGROK_PORT}:4040
-    environment:
-      NGROK_PORT: ${NGROK_TARGET}
-      # Basic 認証
-      NGROK_USERNAME: ${NGROK_USERNAME}
-      NGROK_PASSWORD: ${NGROK_PASSWORD}
-      NGROK_AUTH: ${NGROK_AUTH}
     volumes:
-      # 名前付きボリュームで認証トークンが保存してある ngrok.yml を使用する
-      - ngrok_yml:/home/ngrok/.ngrok2
+      - ${HOST_NGROK_CONFIG_DIR}:${CONTAINER_NGROK_CONFIG_DIR}
