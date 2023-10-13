@@ -9,4 +9,4 @@ tunnels:
     # Ngrok で公開したいポート docker-compose の別コンテナの場合は service:3000 みたいな感じ
     # ローカルの場合は localhost:3000 みたいな感じ
     addr: host.docker.internal:3000
-    domain: YOUR_DOMAIN
+    # domain: YOUR_DOMAIN
