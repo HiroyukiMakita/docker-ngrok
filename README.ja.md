@@ -27,6 +27,11 @@ Ngrok by Docker Compose
 
 先程コピーした Authtoken は `authtoken` に設定してください。
 
+### 無料プランのままドメインを固定する方法
+
+[Domains - ngrok](https://dashboard.ngrok.com/cloud-edge/domains) の「New Domain」をクリックすると、`*.ngrok-free.app` のドメインが作成されます。
+そのドメインを設定ファイルの `domain` に設定してください。
+
 ## 2. `.env` ファイルを作成。
 
 ```

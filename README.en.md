@@ -27,6 +27,11 @@ The name of the file can be arbitrary.
 
 Set `authtoken` to the Authtoken you copied earlier.
 
+### How to lock in your domain with a free plan
+
+Click [New Domain] in [Domains - ngrok](https://dashboard.ngrok.com/cloud-edge/domains) to create the domain `*.ngrok-free.app`.
+Set that domain to `domain` in the configuration file.
+
 ## 2. Create `.env` file.
 
 ```
